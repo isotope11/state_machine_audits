@@ -1,7 +1,6 @@
 require 'state_machine_audits/state_machine_state_audit'
 
 module StateMachineAudits
-  VERSION = "0.1.0"
   extend ActiveSupport::Concern
 
   included do
