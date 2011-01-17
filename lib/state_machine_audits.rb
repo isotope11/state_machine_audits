@@ -1,7 +1,6 @@
 require 'state_machine_audits/state_machine_state_audit'
 
 module StateMachineAudits
-  VERSION = "0.1.0"
   extend ActiveSupport::Concern
 
   included do
@@ -14,7 +13,6 @@ module StateMachineAudits
       if self.changes.include?(_state.to_s)
         the_new_state = self.changes[_state].last
         self.state_machine_state_audits.create(:state => the_new_state, :state_field => _state.to_s)
-        Rails.logger.warn "AUDITING STATE: #{_state} - #{the_new_state}" if Rails.env.development?
       end
     end
   end
