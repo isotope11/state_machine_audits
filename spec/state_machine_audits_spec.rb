@@ -49,7 +49,7 @@ describe StateMachineStateAudit do
     it 'should raise an error' do
       lambda do
         class Truck; include StateMachineAudits; end
-      end.should raise_error
+      end.should raise_error "class must inherit from ActiveRecord::Base"
     end
   end
 

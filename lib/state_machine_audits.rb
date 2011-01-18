@@ -4,6 +4,7 @@ module StateMachineAudits
   extend ActiveSupport::Concern
 
   included do
+    raise "class must inherit from ActiveRecord::Base" unless self < ActiveRecord::Base
     after_save :store_state_machine_audit
     has_many :state_machine_state_audits, :as => :state_machine_auditable
   end
