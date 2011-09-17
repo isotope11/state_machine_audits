@@ -1,0 +1,5 @@
+Description:
+  Copies create_state_machine_audits.rb to db/migrate.
+
+Examples:
+  'rails generate state_machine_audits'
