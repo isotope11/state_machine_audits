@@ -1,6 +1,6 @@
 require 'rails/generators/migration'
 
-class AddressGenerator < Rails::Generators::Base
+class StateMachineAuditsGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
   class << self
